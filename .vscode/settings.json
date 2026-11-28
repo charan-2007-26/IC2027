@@ -3,5 +3,6 @@
         "lib/**/*.jar",
         "c:\\Users\\chara\\OneDrive\\Desktop\\mysql-connector-j-9.6.0.jar"
     ],
-    "java.project.explorer.showNonJavaResources": false
+    "java.project.explorer.showNonJavaResources": false,
+    "java.debug.settings.onBuildFailureProceed": true
 }

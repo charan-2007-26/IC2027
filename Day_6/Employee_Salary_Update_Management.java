@@ -13,7 +13,7 @@ public class Employee_Salary_Update_Management {
         try {
             Connection con =DriverManager.getConnection(url, username, password);
             System.out.println("connected");
-            String update="update employees set salary=? where employee_id=?";
+           /*  String update="update employees set salary=? where employee_id=?";
             PreparedStatement ps1=con.prepareStatement(update);
             System.out.println("update the employee salary using employee id");
             System.out.println("enter employee id :");
@@ -22,7 +22,16 @@ public class Employee_Salary_Update_Management {
             double salary=sc.nextDouble();
             ps1.setDouble(1, salary);
             ps1.setInt(2, id);
+            ps1.executeUpdate();*/
+            //delete record
+             String update="delete from employees where employee_id=?";
+            PreparedStatement ps1=con.prepareStatement(update);
+            System.out.println("delete the employees records using employee id");
+            System.out.println("enter employee id :");
+            int id=sc.nextInt();
+            ps1.setInt(1, id);
             ps1.executeUpdate();
+            
             
             String query="select * from employees";
             PreparedStatement ps=con.prepareStatement(query);
